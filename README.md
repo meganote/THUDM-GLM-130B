@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-   💬 <a href="https://groups.google.com/g/glm-130b-forum" target="_blank">Google Group</a> (Updates) or <a href="https://github.com/THUDM/GLM-130B/blob/main/resources/WechatGroup.jpeg" target="_blank">Wechat Group</a> or <a href="https://join.slack.com/t/glm-130b/shared_invite/zt-1f2ih11xy-EAuDComTAr~XVB3MywE9Cg" target="_blank">Slack channel</a> (Discussions)
+   💬 <a href="https://groups.google.com/g/glm-130b-forum" target="_blank">Google Group</a> (Updates) or <a href="https://github.com/THUDM/GLM-130B/blob/main/resources/WECHAT.md" target="_blank">Wechat Group</a> or <a href="https://join.slack.com/t/glm-130b/shared_invite/zt-1f2ih11xy-EAuDComTAr~XVB3MywE9Cg" target="_blank">Slack channel</a> (Discussions)
 </p>
 
 # GLM-130B: An Open Bilingual Pre-Trained Model
@@ -19,10 +19,12 @@ GLM-130B is an open bilingual (English & Chinese) bidirectional dense model with
 - **Reproducibility:** all results (30+ tasks) can be easily reproduced with open-sourced code and model checkpoints.
 - **Cross-Platform:** supports training and inference on NVIDIA, Hygon DCU, Ascend 910, and Sunway (Will be released soon).
 
-This repository mainly focus on the evaluation of GLM-130B, the training part is open for research purposes, please send an email to glm-130b@googlegroups.com to apply for access. If you find our work and our open-sourced efforts useful, ⭐️ to encourage our following development! :)
+This repository mainly focus on the evaluation of GLM-130B. If you find our work and our open-sourced efforts useful, ⭐️ to encourage our following development! :)
 
 ## News
-
+- **[2023.06.25]** Release [ChatGLM2-6B](https://github.com/THUDM/ChatGLM2-6B), an updated version of [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B) which introduces **Stronger Performance** (MMLU (+23%), CEval (+33%), GSM8K (+571%), BBH (+60%)), **Longer Context** (from 2K in ChatGLM-6B to 32K, and trained with a context length of 8K during the dialogue alignment), and **More Efficient Inference** (speeds up by 42% under the official implementation; the dialogue length supported by 6G GPU memory has increased from 1K to 8K). More details please refer to [ChatGLM2-6B](https://github.com/THUDM/ChatGLM2-6B)。
+- **[2023.06.14]** We release the research [WebGLM](https://github.com/THUDM/WebGLM), which enables efficient and accurate web-enhanced question answering. All code and data are released!
+- **[2023.03.14]** We are happy to introduce [ChatGLM](https://chatglm.cn/blog), a bilingual dialogue language model based on GLM-130B, and its open-sourced version [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B) which can be run under only **6GB** GPU memory! 
 - **[2023.01.21]** GLM-130B has been accepted to [ICLR 2023](https://iclr.cc/Conferences/2023)!
 - **[2022.10.06]** Our [paper](http://arxiv.org/abs/2210.02414) for GLM-130B is out!
 - **[2022.08.24]** We are proud to publish the quantized version for GLM-130B.  While preserving the activation precision as FP16, the model weights can be quantized to as low as **INT4 with almost no degradation of performance**, further reducing the hardware requirements of the GLM-130B to **a single server with 4 * RTX 3090 (24G)**! See [Quantization of GLM-130B](docs/quantization.md) for details.
@@ -179,13 +181,11 @@ This repository is licensed under the [Apache-2.0 license](LICENSE). The use of 
 If you find our work useful, please consider citing GLM-130B:
 
 ```
-@inproceedings{
-  zeng2023glm-130b,
-  title={{GLM}-130B: An Open Bilingual Pre-trained Model},
-  author={Aohan Zeng and Xiao Liu and Zhengxiao Du and Zihan Wang and Hanyu Lai and Ming Ding and Zhuoyi Yang and Yifan Xu and Wendi Zheng and Xiao Xia and Weng Lam Tam and Zixuan Ma and Yufei Xue and Jidong Zhai and Wenguang Chen and Zhiyuan Liu and Peng Zhang and Yuxiao Dong and Jie Tang},
-  booktitle={The Eleventh International Conference on Learning Representations (ICLR)},
-  year={2023},
-  url={https://openreview.net/forum?id=-Aw0rrrPUF}
+@article{zeng2022glm,
+  title={Glm-130b: An open bilingual pre-trained model},
+  author={Zeng, Aohan and Liu, Xiao and Du, Zhengxiao and Wang, Zihan and Lai, Hanyu and Ding, Ming and Yang, Zhuoyi and Xu, Yifan and Zheng, Wendi and Xia, Xiao and others},
+  journal={arXiv preprint arXiv:2210.02414},
+  year={2022}
 }
 ```
 
